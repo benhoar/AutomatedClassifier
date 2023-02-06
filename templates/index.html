@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="prediction">
+        <h1>ML type Prediction</h1>
+        <form action="/predict" method="POST" enctype = "multipart/form-data">
+
+
+		<input name="file" type="file" required="required">
+        <input type="submit">
+        </form>
+
+       <br>
+        <b>{{ prediction_text }}</b>
+        <br>
+        <b>{{ prediction_probability_e }}</b>
+        <br>
+        <b>{{ prediction_probability_ec }}</b>
+        <br>
+        <b>{{ prediction_probability_ce }}</b>
+        <br>
+        <b>{{ prediction_probability_ece }}</b>
+        <br>
+        <b>{{ prediction_probability_disp }}</b>
+    </div>
+{% endblock %}
